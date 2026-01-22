@@ -272,13 +272,13 @@ if (WIN32)
     if (${USE_STATIC_CRT})
         add_compile_options(
             $<$<CONFIG:>:/MT>
-            $<$<CONFIG:Debug>:/MTd>
+            $<$<CONFIG:Debug>:/MT>
             $<$<CONFIG:Release>:/MT>
         )
     else()
         add_compile_options(
             $<$<CONFIG:>:/MD>
-            $<$<CONFIG:Debug>:/MDd>
+            $<$<CONFIG:Debug>:/MD>
             $<$<CONFIG:Release>:/MD>
         )
     endif()
